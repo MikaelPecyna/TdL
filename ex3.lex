@@ -16,7 +16,7 @@ string               \"{StringCharacter}*(\"\"{StringCharacter}*)*\"
 {signedfloat}       {printf("\nFlottant");}
 {expsignedfloat}    {printf("\nFlottant");}
 {comment}           {printf("\nCommentaire");}
-{keyword}           {printf("\nKeyword");}
+{keyword}           {printf("\n%s",yytext);}
 {EOL}               {printf("\nEOL");}
 {string}            {printf("\nString");}
 
