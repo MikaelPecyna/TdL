@@ -814,7 +814,7 @@ YY_RULE_SETUP
 case 5:
 YY_RULE_SETUP
 #line 25 "code.lex"
-{nbInt++; printf("%s",yytext)}
+{nbInt++; printf("%s",yytext);}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP

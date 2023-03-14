@@ -22,7 +22,7 @@ string               \"{StringCharacter}*(\"\"{StringCharacter}*)*\"
 {EOL}                   {printf("\n");}
 " "+                    {printf(" ");}
 {expsignedfloat}        {nbFloat++; printf("%s",yytext);}
-{expsignedint}          {nbInt++; printf("%s",yytext)}
+{expsignedint}          {nbInt++; printf("%s",yytext);}
 {debut}                 {nbDebut++; printf("DEBUT");}
 {fin}                   {nbFin++; printf("FIN");}
 {keyword}               {printf("%s",yytext);}
