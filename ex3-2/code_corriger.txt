@@ -1,0 +1,28 @@
+
+
+NOM "tit i" 
+ 
+DEBUT 
+Avance 124.4 
+ 
+tourner 26 
+ 
+Fois 4 DEBUT 
+ AVANCE 30.5 
+ 
+ FOIS 3 
+ tourner 20 
+ 
+ AVANCE 20.3 
+ 
+ FIN 
+ 
+aVaNcE 120 
+ 
+affiche 
+ 
+FIN 
+
+Nombre de constant float 4
+
+Nombre de constant entiere 4

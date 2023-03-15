@@ -1,3 +1,4 @@
+-- pour lancer le scipt dans le a.out : cat <filename> | ./a.out > <output_file>
 -- ceci est un "commentaire" 
 NOM "tit i" ; 
 debUT 
