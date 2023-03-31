@@ -1,0 +1,16 @@
+%{
+#include<stdio.h>
+%}
+%token PAROU PARFE FIN
+%start S1
+%%
+S : PAROU S PARFE S
+|
+;
+S1 : S FIN { printf(" mot accepte\n") ; YYACCEPT ; }
+%%
+#include "lex.yy.c"
+int main(){
+yyparse();
+printf("voilà, j'ai interprété");
+}

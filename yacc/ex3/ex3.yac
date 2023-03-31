@@ -1,0 +1,27 @@
+%{
+#include<stdio.h>
+%}
+%token ENTIER PLUS DIVIDE MULT MINUS FIN PAROU PARFE  
+%start S1
+%%
+E 	: E MULT T 	{ $$ = $1 * $3 ;	}  
+	| E DIV T 	{ $$ = $1 / $3 ;	}  
+	| T		{ $$ = $1      ;	}
+	;
+ 
+T 	: T PLUS F 	{ $$ = $1 + $3 ;	} 
+	| T MINUS F 	{ $$ = $1 - $3 ;	}
+	| F		{ $$ = $1      ;	}
+	;
+F 	: PAROU E PARFE { $$ = $2      ;	}
+	| ENTIER 	{ $$ = $1      ; 	} 
+	;
+
+S1 	: E FIN { printf("Mot accepté: Resultat = %ld \n", $1) ; YYACCEPT ; }
+%%
+#include "lex.yy.c"
+int main(){
+	yyparse(); 
+	printf("\nVoila, j'ai interprete"); 
+}
+ 

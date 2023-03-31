@@ -1,0 +1,17 @@
+%{
+#include<stdio.h>
+%}
+%%
+S1 : S '\n' { printf(" mot accepte\n") ; YYACCEPT ; }
+S : '(' S ')' S
+|
+;
+%%
+int yylex() {
+char c = getchar ();
+if (c != '(' && c != ')' && c != '\n')
+printf(" [Erreur %c inconnu]",c);
+else
+printf("%c",c);
+return c ;
+}
